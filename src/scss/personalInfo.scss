@@ -1,0 +1,23 @@
+main{
+  h1{
+    margin-bottom: 5px;
+  }
+  p{
+    margin-bottom: 25px;
+  }
+  form{
+    div{
+      // background-color: #ace;
+      margin-bottom: 20px;
+      p{
+        margin-bottom: 5px;
+      }
+      input{
+        border-radius: 7px;
+        border: 1px solid #0004;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+  } 
+}
