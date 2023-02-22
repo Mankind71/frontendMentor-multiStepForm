@@ -138,6 +138,11 @@
           height: 100%;
         }
       }
+      footer {
+        div {
+          width: $rightSectionContentWidthLg;
+        }
+      }
     }
   }
 }
@@ -190,6 +195,11 @@
           width: 90%;
           margin: auto;
         }
+      }
+    }
+    footer {
+      div {
+        width: $rightSectionContentWidthSm;
       }
     }
   }
