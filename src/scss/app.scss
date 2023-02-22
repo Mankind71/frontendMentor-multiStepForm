@@ -46,7 +46,6 @@
 
       .details {
         main {
-          width: $rightSectionContentWidth;
           .title {
             margin-bottom: 5px;
             color: $Marine_blue;
@@ -66,7 +65,6 @@
         border-radius: 10px;
         height: 100px;
         div {
-          width: $rightSectionContentWidth;
           display: flex;
           justify-content: space-between;
 
@@ -112,7 +110,7 @@
           margin-bottom: 20px;
 
           .numCon {
-            width: 40px ;
+            width: 40px;
             height: 40px;
           }
           .details {
@@ -134,6 +132,7 @@
 
       .details {
         main {
+          width: $rightSectionContentWidthLg;
           margin: auto;
           padding: 45px 0;
           height: 100%;
@@ -149,7 +148,8 @@
     flex-direction: column;
 
     .levels {
-      background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat center center;
+      background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat center
+        center;
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -162,12 +162,12 @@
         margin-bottom: 100px;
         display: flex;
         flex-direction: row;
-        align-items: center ;
+        align-items: center;
         justify-content: center;
 
         .items {
           .numCon {
-            width: 35px ;
+            width: 35px;
             height: 35px;
           }
           .details {
@@ -181,6 +181,7 @@
       .details {
         background-color: $Magnolia;
         main {
+          width: $rightSectionContentWidthSm;
           position: relative;
           top: -5.3rem;
           border-radius: 15px;
