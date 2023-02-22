@@ -46,6 +46,7 @@
 
       .details {
         main {
+          width: var(--rightSectionContentWidth);
           .title {
             margin-bottom: 5px;
             color: $Marine_blue;
@@ -65,6 +66,7 @@
         border-radius: 10px;
         height: 100px;
         div {
+          width: var(--rightSectionContentWidth);
           display: flex;
           justify-content: space-between;
 
@@ -90,6 +92,10 @@
 }
 
 @media (min-width: 376px) {
+  :root {
+    --rightSectionContentWidth: 70%;
+  }
+
   .content {
     border-radius: 15px;
     padding: 15px;
@@ -132,15 +138,9 @@
 
       .details {
         main {
-          width: $rightSectionContentWidthLg;
           margin: auto;
           padding: 45px 0;
           height: 100%;
-        }
-      }
-      footer {
-        div {
-          width: $rightSectionContentWidthLg;
         }
       }
     }
@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 375px) {
+  :root {
+    --rightSectionContentWidth: 90%;
+  }
   .content {
     // width: 100%;
     flex-direction: column;
@@ -186,20 +189,13 @@
       .details {
         background-color: $Magnolia;
         main {
-          width: $rightSectionContentWidthSm;
           position: relative;
           top: -5.3rem;
           border-radius: 15px;
           padding: 40px 30px;
           background-color: #fff;
-          width: 90%;
           margin: auto;
         }
-      }
-    }
-    footer {
-      div {
-        width: $rightSectionContentWidthSm;
       }
     }
   }
