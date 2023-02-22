@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: 376px) {
+@media (min-width: 426px) {
   :root {
     --rightSectionContentWidth: 70%;
   }
@@ -110,7 +110,7 @@
 
       .itemsContainer {
         flex-direction: column;
-        padding: 10px 40px;
+        padding: 10px 10px;
 
         .items {
           margin-bottom: 20px;
@@ -147,7 +147,13 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 768px) {
+  .content > .levels > .itemsContainer {
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 425px) {
   :root {
     --rightSectionContentWidth: 90%;
   }
@@ -165,8 +171,8 @@
       height: 200px;
 
       .itemsContainer {
-        height: fit-content !important;
-        padding: 0 !important;
+        // height: fit-content !important;
+        padding: 0;
         margin-bottom: 100px;
         display: flex;
         flex-direction: row;
