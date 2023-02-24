@@ -1,5 +1,12 @@
-@mixin vertical-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+@mixin respond($breakpoint) {
+  @if ($breakpoint == large) {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == small) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
 }

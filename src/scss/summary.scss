@@ -1,0 +1,23 @@
+.cardCompCon{
+  background-color: lightcyan;
+}
+
+.addOnCard{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: space-between;
+  padding: 10px;
+
+  h2,p{
+    margin: 0;
+  }
+  section{
+    margin-left: 20px;
+    width: 100%;
+  }
+  h2{
+    font-size: large;
+  }
+}

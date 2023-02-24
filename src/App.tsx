@@ -1,5 +1,9 @@
+import AddOns from "./components/AddOns";
 import PersonalInfo from "./components/PersonalInfo";
-import "./scss/app.scss"
+import SelectPlan from "./components/SelectPlan";
+import Summary from "./components/Summary";
+import "./scss/app.scss";
+import thanks from "./assets/images/icon-thank-you.svg";
 
 function App() {
   return (
@@ -39,7 +43,10 @@ function App() {
         </section>
         <section className="right-section">
           <section className="details">
-            <PersonalInfo />
+            {/* <PersonalInfo /> */}
+            {/* <SelectPlan /> */}
+            {/* <AddOns /> */}
+            <Summary />
           </section>
           <footer>
             <div>
@@ -47,6 +54,11 @@ function App() {
               <button className="next">Next Step</button>
             </div>
           </footer>
+          {/* <section className="d-flex flex-direction-column align-items-center justify-content-center">
+            <img src={thanks} alt="thanks" width={50} />
+            <h1>Thank you!</h1>
+            <p>Thanks for confirming</p>
+          </section> */}
         </section>
       </section>
     </section>

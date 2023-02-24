@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: 426px) {
+@include respond(large) {
   :root {
     --rightSectionContentWidth: 70%;
   }
@@ -105,15 +105,19 @@
       background: url("../assets/images/bg-sidebar-desktop.svg") no-repeat
         center center;
       background-size: cover;
-      width: 40%;
+      // width:clamp(300px,500px, 40%);
+      width: max(300px, 40%);
       border-radius: 15px;
 
       .itemsContainer {
         flex-direction: column;
-        padding: 10px 10px;
+        padding: 30px 0px;
 
         .items {
+          width: max(166px, 60%);
+          // background-color: #aef;
           margin-bottom: 20px;
+          margin: 10px auto;
 
           .numCon {
             width: 40px;
@@ -147,13 +151,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  .content > .levels > .itemsContainer {
-    padding: 10px 40px;
-  }
-}
-
-@media (max-width: 425px) {
+@include respond(small) {
   :root {
     --rightSectionContentWidth: 90%;
   }

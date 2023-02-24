@@ -9,13 +9,3 @@ $Light_gray: hsl(229, 24%, 87%);
 $Magnolia: hsl(217, 100%, 97%);
 $Alabaster: hsl(231, 100%, 99%);
 $White: hsl(0, 0%, 100%);
-
-$rightSectionContentWidthLg: 70%;
-$rightSectionContentWidthSm: 90%;
-
-@media (min-width: 376px) {
-$rightSectionContentWidth: 70%;
-}
-@media (max-width: 375px) {
-$rightSectionContentWidth: 90%;
-}
