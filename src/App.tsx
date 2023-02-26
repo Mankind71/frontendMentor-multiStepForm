@@ -7,13 +7,13 @@ import thanks from "./assets/images/icon-thank-you.svg";
 import { useState } from "react";
 
 function App() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(3);
   console.log(index);
 
   const handleClick = () => {
-    setIndex(index+1);
-  }
-  
+    setIndex(index + 1);
+  };
+
   return (
     <section className="App">
       <section className="content">
@@ -60,7 +60,14 @@ function App() {
               </section>
               <footer>
                 <div>
-                  <button className="back" onClick={()=>{setIndex(index-1)}}>Go back</button>
+                  <button
+                    className="back"
+                    onClick={() => {
+                      setIndex(index - 1);
+                    }}
+                  >
+                    Go back
+                  </button>
                   <button onClick={handleClick} className="next">
                     Next Step
                   </button>

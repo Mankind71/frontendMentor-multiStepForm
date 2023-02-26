@@ -158,6 +158,7 @@
   .content {
     // width: 100%;
     flex-direction: column;
+    min-height: 100vh;
 
     .levels {
       background: url("../assets/images/bg-sidebar-mobile.svg") no-repeat center
