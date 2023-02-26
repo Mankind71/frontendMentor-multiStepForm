@@ -1,32 +1,35 @@
-import React from 'react'
+import React from "react";
 import "../scss/summary.scss";
 
 const Summary = () => {
   return (
-    <main>
-      <h1 className="title">Select your plan</h1>
-      <p className="desc">You have the option of monthly or yearly billing.</p>
+    <main className="summary">
+      <h1 className="title">Finishing up</h1>
+      <p className="desc">Double-check everything looks OK before confirming</p>
       <section className="cardCompCon">
-        <CardComp title="Arcade (Monthly)" desc="Change" cost="$9/mo" />
+        <section className="addOnCard">
+          <div>
+            <h2>Arcade (Monthly)</h2>
+            <p className="change">Change</p>
+          </div>
+          <h6>$9/mo</h6>
+        </section>
         <hr />
-        <CardComp desc="Arcade" cost="$1/mo" />
-        <CardComp desc="Arcade" cost="$2/mo" />
+        <section className="addOnCard">
+          <p>Online service</p>
+          <h6>+$1/mo</h6>
+        </section>
+        <section className="addOnCard">
+          <p>Larger storage</p>
+          <h6>+$2/mo</h6>
+        </section>
       </section>
-      <CardComp desc="Total (per month)" cost="$12/mo" />
+      <section className=" total addOnCard">
+        <p>Total (per month)</p>
+        <div className="totalCost">+$12/mo</div>
+      </section>
     </main>
   );
 };
 
-const CardComp = ({ title='', desc, cost }) => {
-  return (
-    <section className="addOnCard">
-      <section>
-        <h2>{title}</h2>
-        <p>{desc}</p>
-      </section>
-      <p>{cost}</p>
-    </section>
-  );
-};
-
-export default Summary
+export default Summary;

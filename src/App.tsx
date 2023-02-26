@@ -4,8 +4,16 @@ import SelectPlan from "./components/SelectPlan";
 import Summary from "./components/Summary";
 import "./scss/app.scss";
 import thanks from "./assets/images/icon-thank-you.svg";
+import { useState } from "react";
 
 function App() {
+  const [index, setIndex] = useState(0);
+  console.log(index);
+
+  const handleClick = () => {
+    setIndex(index+1);
+  }
+  
   return (
     <section className="App">
       <section className="content">
@@ -42,23 +50,30 @@ function App() {
           </div>
         </section>
         <section className="right-section">
-          <section className="details">
-            {/* <PersonalInfo /> */}
-            {/* <SelectPlan /> */}
-            {/* <AddOns /> */}
-            <Summary />
-          </section>
-          <footer>
-            <div>
-              <button className="back">Go back</button>
-              <button className="next">Next Step</button>
-            </div>
-          </footer>
-          {/* <section className="d-flex flex-direction-column align-items-center justify-content-center">
-            <img src={thanks} alt="thanks" width={50} />
-            <h1>Thank you!</h1>
-            <p>Thanks for confirming</p>
-          </section> */}
+          {index < 4 ? (
+            <>
+              <section className="details">
+                {index === 0 && <PersonalInfo />}
+                {index === 1 && <SelectPlan />}
+                {index === 2 && <AddOns />}
+                {index === 3 && <Summary />}
+              </section>
+              <footer>
+                <div>
+                  <button className="back" onClick={()=>{setIndex(index-1)}}>Go back</button>
+                  <button onClick={handleClick} className="next">
+                    Next Step
+                  </button>
+                </div>
+              </footer>
+            </>
+          ) : (
+            <section className="d-flex flex-direction-column align-items-center justify-content-center">
+              <img src={thanks} alt="thanks" width={50} />
+              <h1>Thank you!</h1>
+              <p>Thanks for confirming</p>
+            </section>
+          )}
         </section>
       </section>
     </section>

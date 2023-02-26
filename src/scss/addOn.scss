@@ -1,26 +1,43 @@
-.addOnCard{
-  border: solid 1px grey;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
+@import "./variables";
+@import "./mixins";
 
+.addOns {
+  .cardCompCon {
+    .addOnCard {
+      border: solid 1px grey;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
 
-  .checkBox{
-    background-color: blue;
-    font-size: 400px;
-  }
+      h2,
+      p {
+        margin: 0;
+      }
+      section {
+        margin-left: 20px;
+        width: 100%;
 
-  h2,p{
-    margin: 0;
-  }
-  section{
-    margin-left: 20px;
-    width: 100%;
-  }
-  h2{
-    font-size: large;
+        h2 {
+          font-size: medium;
+        }
+        p {
+          font-size: 14px;
+        }
+        .cardDesc {
+          color: grey;
+        }
+      }
+      .cost {
+        color: $Purplish_blue;
+      }
+    }
+
+    .active {
+      border: solid 1px $Marine_blue;
+      background-color: $Magnolia;
+    }
   }
 }

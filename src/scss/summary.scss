@@ -1,23 +1,85 @@
-.cardCompCon{
-  background-color: lightcyan;
+@import "./variables";
+@import "./mixins";
+
+.summary {
+  p {
+    color: $Cool_gray;
+  }
+  .cardCompCon {
+    background-color: $Magnolia;
+    border-radius: 7px;
+
+    .change {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    hr {
+      color: $Cool_gray;
+    }
+    .addOnCard:nth-last-child(1) {
+      margin-top: 10px;
+    }
+    .addOnCard:nth-last-child(1),
+    .addOnCard:nth-last-child(2) {
+      h6{
+        font-weight: normal;
+        font-size: 14px;
+      }
+    }
+  }
+  .total {
+    .totalCost {
+      color: blue;
+      font-weight: bold;
+    }
+  }
+
+  .addOnCard {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+    padding: 0;
+
+    h2,
+    p {
+      margin: 0;
+    }
+    h2 {
+      font-size: large;
+    }
+  }
 }
 
-.addOnCard{
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  margin: 0;
-  justify-content: space-between;
-  padding: 10px;
+@include respond(large) {
+  :root {
+    --rightSectionContentWidth: 70%;
+    --padding: 20px;
+  }
+  .summary {
+    .cardCompCon,
+    .total {
+      padding: 20px;
+    }
+  }
+}
 
-  h2,p{
-    margin: 0;
+@include respond(small) {
+  :root {
+    --rightSectionContentWidth: 90%;
   }
-  section{
-    margin-left: 20px;
-    width: 100%;
-  }
-  h2{
-    font-size: large;
+
+  .summary {
+    .cardCompCon,
+    .total {
+      padding: 15px;
+    }
+    .total {
+      padding-top: 30px;
+      margin-bottom: -5px;
+      padding-bottom: 0px;
+    }
   }
 }

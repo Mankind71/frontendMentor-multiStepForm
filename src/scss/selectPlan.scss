@@ -1,77 +1,97 @@
+@import "./variables";
 @import "./mixins";
 
-.planCard {
-  border: solid 1px grey;
-  border-radius: 15px;
+.selectPlan {
+  .planCard {
+    border: solid 1px grey;
+    border-radius: 15px;
 
-  section {
-    p,
-    h2 {
-      margin-bottom: 0;
+    img {
+      // background-color: #a38;
+      width: 40px;
+      height: auto;
     }
-  }
-}
 
-.period {
-  background-color: #ace;
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
-  align-items: center;
-
-  .button {
-    background-color: darkviolet;
-    margin: 10px 20px;
-    height: 25px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-
-    .circle {
-      background-color: #fff;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      margin: 10px 7px;
-    }
-  }
-}
-
-@include respond(large) {
-  .cardCompCon {
-    display: flex;
-    justify-content: space-between;
-
-    .planCard {
-      width: 30%;
-      background-color: #fff;
-      padding: 15px 10px;
-
-      img {
-        margin-bottom: 30px;
+    section {
+      p,
+      h2 {
+        margin-bottom: 0;
       }
       h2 {
         font-size: large;
       }
     }
   }
+
+  .period {
+    background-color: $Magnolia;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    .button {
+      background-color: $Marine_blue;
+      margin: 15px 20px;
+      height: 20px;
+      width: 40px;
+      border-top-left-radius: 12.5px;
+      border-bottom-left-radius: 12.5px;
+      border-top-right-radius: 12.5px;
+      border-bottom-right-radius: 12.5px;
+
+      .circle {
+        background-color: #fff;
+        margin: 4px 3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        position: relative;
+        // left: 22px;
+      }
+    }
+  }
+}
+
+@include respond(large) {
+  .selectPlan {
+    .cardCompCon {
+      display: flex;
+      justify-content: space-between;
+
+      .planCard {
+        width: 30%;
+        background-color: #fff;
+        padding: 15px 10px;
+
+        img {
+          margin-bottom: 30px;
+        }
+        h2 {
+          font-size: large;
+        }
+      }
+    }
+  }
 }
 
 @include respond(small) {
-  .planCard {
-    display: flex;
-    padding: 20px 15px;
-    margin-bottom: 20px;
+  .selectPlan {
+    .planCard {
+      display: flex;
+      padding: 20px 15px;
+      margin-bottom: 20px;
 
-    img{
-      margin-right: 20px;
-    }
+      img {
+        margin-right: 20px;
+      }
 
-    section{
-      h2{
-        margin-bottom: 3px;
+      section {
+        h2 {
+          margin-bottom: 3px;
+        }
       }
     }
-
   }
 }

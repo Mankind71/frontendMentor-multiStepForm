@@ -3,9 +3,11 @@ import "../scss/personalInfo.scss"
 
 const PersonalInfo = () => {
   return (
-    <main className="info">
-      <h1 className='title'>Personal info</h1>
-      <p className='desc'>Please provide your name, email address, and phone number.</p>
+    <main className="info personalInfo">
+      <h1 className="title">Personal info</h1>
+      <p className="desc">
+        Please provide your name, email address, and phone number.
+      </p>
       <form>
         <div className="name">
           <p>Name</p>

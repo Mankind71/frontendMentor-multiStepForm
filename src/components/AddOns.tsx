@@ -1,31 +1,46 @@
-import React from 'react'
+import React from "react";
 import "../scss/addOn.scss";
 
 const AddOns = () => {
   return (
-    <main>
-      <h1 className="title">Select your plan</h1>
-      <p className="desc">You have the option of monthly or yearly billing.</p>
+    <main className="addOns">
+      <h1 className="title">Pick add-ons</h1>
+      <p className="desc">Add-ons helps enhance your gaming experience.</p>
       <section className="cardCompCon">
-        <CardComp title="Arcade" desc="Arcade" cost="$9/mo" />
-        <CardComp title="Arcade" desc="Arcade" cost="$9/mo" />
-        <CardComp title="Arcade" desc="Arcade" cost="$9/mo" />
+        <CardComp
+          className=""
+          title="Online service"
+          desc="Access to multiplayer games"
+          cost="$1/mo"
+        />
+        <CardComp
+          className=""
+          title="Larger storage"
+          desc="Extra 1TB of cloud save"
+          cost="$2/mo"
+        />
+        <CardComp
+          className="active"
+          title="Customizable profile"
+          desc="Custom theme on your profile"
+          cost="$2/mo"
+        />
       </section>
     </main>
   );
 };
 
-const CardComp = ({ title, desc, cost }) => {
+const CardComp = ({ className, title, desc, cost }) => {
   return (
-    <section className="addOnCard">
-      <input type="checkbox" className='checkBox' name="" id="" />
+    <section className={`addOnCard ${className}`}>
+      <input type="checkbox" className="" name="checkbox" id="" />
       <section>
-        <h2>{title}</h2>
-        <p>{desc}</p>
+        <h2 className="">{title}</h2>
+        <p className="cardDesc">{desc}</p>
       </section>
-      <p>{cost}</p>
+      <p className="cost">{cost}</p>
     </section>
   );
 };
 
-export default AddOns
+export default AddOns;
